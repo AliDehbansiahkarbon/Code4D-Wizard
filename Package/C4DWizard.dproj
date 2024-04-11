@@ -99,6 +99,7 @@
         <VerInfo_IncludeVerInfo>true</VerInfo_IncludeVerInfo>
         <VerInfo_Locale>1033</VerInfo_Locale>
         <DCC_Description>C4D Wizard</DCC_Description>
+        <DCC_Warnings>false</DCC_Warnings>
     </PropertyGroup>
     <PropertyGroup Condition="'$(Cfg_2)'!=''">
         <DCC_LocalDebugSymbols>false</DCC_LocalDebugSymbols>
@@ -304,11 +305,12 @@
         <DCCReference Include="..\Src\AiAssistant\C4D.Wizard.AiAssistant.XSuperJSON.pas"/>
         <DCCReference Include="..\Src\AiAssistant\C4D.Wizard.AiAssistant.Ask.Dockable.pas"/>
         <DCCReference Include="..\Src\AiAssistant\C4D.Wizard.AiAssistant.MenuHook.pas"/>
-        <DCCReference Include="..\Src\AiAssistant\C4D.Wizard.AiAssistant.CodeEditorHelper.pas"/>
+        <DCCReference Include="..\Src\AiAssistant\C4D.Wizard.AiAssistant.Editor.Helper.pas"/>
         <DCCReference Include="..\Src\AiAssistant\C4D.Wizard.AiAssistant.Progress.pas">
             <Form>Frm_Progress</Form>
             <FormType>dfm</FormType>
         </DCCReference>
+        <DCCReference Include="..\Src\AiAssistant\C4D.Wizard.AiAssistant.Editor.PopUpMenu.pas"/>
         <RcItem Include="Img\C4D_Logo.bmp">
             <ResourceType>BITMAP</ResourceType>
             <ResourceId>C4D_Logo</ResourceId>
@@ -440,6 +442,18 @@
         <RcItem Include="Img\c4d_ai_close.bmp">
             <ResourceType>BITMAP</ResourceType>
             <ResourceId>c4d_ai_close</ResourceId>
+        </RcItem>
+        <RcItem Include="Img\c4d_ai.bmp">
+            <ResourceType>BITMAP</ResourceType>
+            <ResourceId>c4d_ai</ResourceId>
+        </RcItem>
+        <RcItem Include="Img\c4d_ai_ask.bmp">
+            <ResourceType>BITMAP</ResourceType>
+            <ResourceId>c4d_ai_ask</ResourceId>
+        </RcItem>
+        <RcItem Include="Img\c4d_ai_setting.bmp">
+            <ResourceType>BITMAP</ResourceType>
+            <ResourceId>c4d_ai_setting</ResourceId>
         </RcItem>
         <BuildConfiguration Include="Base">
             <Key>Base</Key>

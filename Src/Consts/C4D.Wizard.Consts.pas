@@ -187,6 +187,17 @@ type
     AI_ASSISTANT_DEFAULT_RTL = False;
     AI_ASSISTANT_CRLF = #13#10;
 
+
+    AI_ASSISTANT_CM_ADDTEST = 'Create unit test for the following Delphi code';
+    AI_ASSISTANT_CM_FINDBUGS = 'Find possible bugs in the following Delphi code';
+    AI_ASSISTANT_CM_OPTIMIZE = 'Optimize the following Delphi code';
+    AI_ASSISTANT_CM_ADDCOMMENTS = 'Add descriptive comments for the following Delphi code';
+    AI_ASSISTANT_CM_COMPLETE_CODE = 'Try to complete the following Delphi code and return the completed code';
+    AI_ASSISTANT_CM_EXPLAIN = 'Explain what does the following code';
+    AI_ASSISTANT_CM_REFACTOR = 'Refactor the following code';
+    AI_ASSISTANT_CM_CONVERT_TO_ASM = 'Convert the following code to Assembly code';
+
+
     //Thread Messages
     WM_UPDATE_MESSAGE = WM_USER + 5874;
     WM_PROGRESS_MESSAGE = WM_USER + 5875;

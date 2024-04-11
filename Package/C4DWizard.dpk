@@ -153,7 +153,8 @@ contains
   C4D.Wizard.AiAssistant.XSuperJSON in '..\Src\AiAssistant\C4D.Wizard.AiAssistant.XSuperJSON.pas',
   C4D.Wizard.AiAssistant.Ask.Dockable in '..\Src\AiAssistant\C4D.Wizard.AiAssistant.Ask.Dockable.pas',
   C4D.Wizard.AiAssistant.MenuHook in '..\Src\AiAssistant\C4D.Wizard.AiAssistant.MenuHook.pas',
-  C4D.Wizard.AiAssistant.CodeEditorHelper in '..\Src\AiAssistant\C4D.Wizard.AiAssistant.CodeEditorHelper.pas',
-  C4D.Wizard.AiAssistant.Progress in '..\Src\AiAssistant\C4D.Wizard.AiAssistant.Progress.pas' {Frm_Progress};
+  C4D.Wizard.AiAssistant.Editor.Helper in '..\Src\AiAssistant\C4D.Wizard.AiAssistant.Editor.Helper.pas',
+  C4D.Wizard.AiAssistant.Progress in '..\Src\AiAssistant\C4D.Wizard.AiAssistant.Progress.pas' {Frm_Progress},
+  C4D.Wizard.AiAssistant.Editor.PopUpMenu in '..\Src\AiAssistant\C4D.Wizard.AiAssistant.Editor.PopUpMenu.pas';
 
 end.
