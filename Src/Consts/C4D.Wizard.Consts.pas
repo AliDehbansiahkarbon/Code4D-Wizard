@@ -3,7 +3,7 @@ unit C4D.Wizard.Consts;
 interface
 
 uses
-  C4D.Wizard.Types;
+  Winapi.Messages, C4D.Wizard.Types;
 
 type
   TC4DConsts = class
@@ -103,6 +103,12 @@ type
     MENU_IDE_FormatSource_CAPTION = 'Format Source';
     MENU_IDE_NOTES_NAME = 'C4DWizarNotes1';
     MENU_IDE_NOTES_CAPTION = 'Notes';
+    MENU_IDE_AI_ASSISTANT_NAME = 'AiAssistant';
+    MENU_IDE_AI_ASSISTANT_CAPTION = 'AI Assistant';
+    MENU_IDE_AI_SETTING_NAME = 'AiSetting';
+    MENU_IDE_AI_SETTING_CAPTION = 'AI Setting';
+    MENU_IDE_AI_ASK_NAME = 'AiAsk';
+    MENU_IDE_AI_ASK_CAPTION = 'Ask AI';
 
     //FILE .INI REOPEN
     REOPEN_INI_Favorite = 'Favorite';
@@ -170,6 +176,20 @@ type
 
     STR_CMD_COMMANDS = 'CMD Commands';
     STR_MENU_MASTER_ONLY = 'Menu Master Only';
+
+    //AI Assistant
+    AI_ASSISTANT_DEFAULT_URL = 'https://api.openai.com/v1/chat/completions';
+    AI_ASSISTANT_DEFAULT_MODEL = 'gpt-3.5-turbo';
+    AI_ASSISTANT_DEFAULT_MAXTOKEN = 2048;
+    AI_ASSISTANT_DEFAULT_TEMPERATURE = 0;
+    AI_ASSISTANT_DEFAULT_IDENTIFIER = 'cpt';
+    AI_ASSISTANT_DEFAULT_CODEFORMATTER = False;
+    AI_ASSISTANT_DEFAULT_RTL = False;
+    AI_ASSISTANT_CRLF = #13#10;
+
+    //Thread Messages
+    WM_UPDATE_MESSAGE = WM_USER + 5874;
+    WM_PROGRESS_MESSAGE = WM_USER + 5875;
   end;
 
 implementation

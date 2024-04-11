@@ -36,6 +36,9 @@ type
     FImgIndexBuildGroup: Integer;
     FImgIndexVerifyDocument: Integer;
     FImgIndexNotes: Integer;
+    FImageIndexAiAssistant: Integer;
+    FImgIndexAiSetting: Integer;
+    FImgIndexAiAsk: Integer;
     constructor Create;
   public
     property ImgIndexC4D_Logo: Integer read FImgIndexC4D_Logo;
@@ -65,6 +68,9 @@ type
     property ImgIndexBuildGroup: Integer read FImgIndexBuildGroup;
     property ImgIndexVerifyDocument: Integer read FImgIndexVerifyDocument;
     property ImgIndexNotes: Integer read FImgIndexNotes;
+    property ImageIndexAiAssistant: Integer read FImageIndexAiAssistant;
+    property ImgIndexAiSetting: Integer read FImgIndexAiSetting;
+    property ImgIndexAiAsk: Integer read FImgIndexAiAsk;
     class function GetInstance: TC4DWizardIDEImageListMain;
   end;
 
@@ -112,6 +118,9 @@ begin
   FImgIndexBuildGroup := TC4DWizardUtilsOTA.AddImgIDEResourceName('c4d_build_group');
   FImgIndexVerifyDocument := TC4DWizardUtilsOTA.AddImgIDEResourceName('c4d_verify_document');
   FImgIndexNotes := TC4DWizardUtilsOTA.AddImgIDEResourceName('c4d_notes');
+  FImageIndexAIAssistant := TC4DWizardUtilsOTA.AddImgIDEResourceName('c4d_ai');
+  FImgIndexAiSetting := TC4DWizardUtilsOTA.AddImgIDEResourceName('c4d_ai_setting');
+  FImgIndexAiAsk := TC4DWizardUtilsOTA.AddImgIDEResourceName('c4d_ai_ask');
 end;
 
 initialization

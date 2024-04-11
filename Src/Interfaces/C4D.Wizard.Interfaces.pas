@@ -143,6 +143,11 @@ type
     function ShortcutNotes: string; overload;
     function ShortcutNotes(Value: string): IC4DWizardSettingsModel; overload;
 
+    function ShortcutAIAssistantUse: Boolean; overload;
+    function ShortcutAIAssistantUse(Value: Boolean): IC4DWizardSettingsModel; overload;
+    function ShortcutAIAssistant: string; overload;
+    function ShortcutAIAssistant(Value: string): IC4DWizardSettingsModel; overload;
+
     function ShortcutGitHubDesktopUse: Boolean; overload;
     function ShortcutGitHubDesktopUse(Value: Boolean): IC4DWizardSettingsModel; overload;
     function ShortcutGitHubDesktop: string; overload;

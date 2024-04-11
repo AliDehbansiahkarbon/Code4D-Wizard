@@ -6,7 +6,8 @@ uses
   System.SysUtils,
   System.Classes,
   VCL.Forms,
-  ToolsAPI;
+  ToolsAPI,
+  VCL.Dialogs;
 
 type
   TC4DWizardIDEMainMenuClicks = class
@@ -21,6 +22,8 @@ type
     class procedure FindClick(Sender: TObject);
     class procedure ReplaceClick(Sender: TObject);
     class procedure NotesClick(Sender: TObject);
+    class procedure AiAskClick(Sender: TObject);
+    class procedure AiSettingClick(Sender: TObject);
     class procedure DefaultFilesInOpeningProjectClick(Sender: TObject);
     class procedure BackupExportClick(Sender: TObject);
     class procedure BackupImportClick(Sender: TObject);
@@ -52,7 +55,9 @@ uses
   C4D.Wizard.View.About,
   C4D.Wizard.DefaultFilesInOpeningProject,
   C4D.Wizard.FormatSource.View,
-  C4D.Wizard.Notes.View;
+  C4D.Wizard.Notes.View,
+  C4D.Wizard.AiAssistant.Setting.View,
+  C4D.Wizard.AiAssistant.Ask.Dockable;
 
 class procedure TC4DWizardIDEMainMenuClicks.UsesOrganizationClick(Sender: TObject);
 var
@@ -137,6 +142,43 @@ begin
   TC4DWizardDefaultFilesInOpeningProject
     .New(Self.GetFileNameCurrentProject)
     .SelectionFilesForDefaultOpening;
+end;
+
+class procedure TC4DWizardIDEMainMenuClicks.AiAskClick(Sender: TObject);
+var
+  LvSettingObj: TSingletonSettingObj;
+begin
+  LvSettingObj := TSingletonSettingObj.Instance;
+  LvSettingObj.ReadRegistry;
+  if LvSettingObj.ApiKey = '' then
+  begin
+    if (LvSettingObj.IsOffline) and (LvSettingObj.GetSetting.Trim.IsEmpty) then
+      Exit;
+  end;
+
+  if not Assigned(FChatGPTDockForm) then
+    FChatGPTDockForm := TChatGPTDockForm.Create(Application);
+
+  TSingletonSettingObj.RegisterFormClassForTheming(TChatGPTDockForm, FChatGPTDockForm); //Apply Theme
+  //RenewUI(FChatGPTDockForm);
+  FChatGPTDockForm.Show;
+end;
+
+class procedure TC4DWizardIDEMainMenuClicks.AiSettingClick(Sender: TObject);
+var
+  LvSettingObj: TSingletonSettingObj;
+begin
+  LvSettingObj := TSingletonSettingObj.Instance;
+  LvSettingObj.ReadRegistry;
+  begin
+    Frm_Setting := TFrm_AI_Setting.Create(nil);
+    try
+      TSingletonSettingObj.RegisterFormClassForTheming(TFrm_AI_Setting, Frm_Setting);
+      Frm_Setting.ShowModal;
+    finally
+      FreeAndNil(Frm_Setting);
+    end;
+  end;
 end;
 
 class procedure TC4DWizardIDEMainMenuClicks.BackupExportClick(Sender: TObject);

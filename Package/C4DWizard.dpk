@@ -32,7 +32,17 @@ package C4DWizard;
 requires
   rtl,
   designide,
-  vclie;
+  vclie,
+  dbrtl,
+  IndySystem,
+  IndyProtocols,
+  IndyCore,
+  vcldb,
+  FireDAC,
+  FireDACCommonDriver,
+  FireDACCommon,
+  vclFireDAC,
+  FireDACSqliteDriver;
 
 contains
   C4D.Wizard.Register in '..\Src\C4D.Wizard.Register.pas',
@@ -129,6 +139,21 @@ contains
   C4D.Wizard.IDE.ShortCut.KeyboardBinding in '..\Src\IDE\ShortCut\C4D.Wizard.IDE.ShortCut.KeyboardBinding.pas',
   C4D.Wizard.UsesOrganization.ListOfUses in '..\Src\UsesOrganization\C4D.Wizard.UsesOrganization.ListOfUses.pas',
   C4D.Wizard.FormatSource.View in '..\Src\FormatSource\C4D.Wizard.FormatSource.View.pas' {C4DWizardFormatSourceView},
-  C4D.Wizard.Notes.View in '..\Src\Notes\C4D.Wizard.Notes.View.pas' {C4DWizardNotesView};
+  C4D.Wizard.Notes.View in '..\Src\Notes\C4D.Wizard.Notes.View.pas' {C4DWizardNotesView},
+  C4D.Wizard.IDE.MainMenu.AiAssistant in '..\Src\IDE\MainMenu\C4D.Wizard.IDE.MainMenu.AiAssistant.pas',
+  C4D.Wizard.AiAssistant.Interfaces in '..\Src\AiAssistant\C4D.Wizard.AiAssistant.Interfaces.pas',
+  C4D.Wizard.AiAssistant.Setting.View in '..\Src\AiAssistant\C4D.Wizard.AiAssistant.Setting.View.pas' {Frm_AI_Setting},
+  C4D.Wizard.AiAssistant.Ask.Frame in '..\Src\AiAssistant\C4D.Wizard.AiAssistant.Ask.Frame.pas' {Fram_Question: TFrame},
+  C4D.Wizard.AiAssistant.Thread in '..\Src\AiAssistant\C4D.Wizard.AiAssistant.Thread.pas',
+  C4D.Wizard.AiAssistant.Lexer in '..\Src\AiAssistant\C4D.Wizard.AiAssistant.Lexer.pas',
+  C4D.Wizard.AiAssistant.History in '..\Src\AiAssistant\C4D.Wizard.AiAssistant.History.pas',
+  C4D.Wizard.AiAssistant.PascalLexer in '..\Src\AiAssistant\C4D.Wizard.AiAssistant.PascalLexer.pas',
+  C4D.Wizard.AiAssistant.PascalLexerTypes in '..\Src\AiAssistant\C4D.Wizard.AiAssistant.PascalLexerTypes.pas',
+  C4D.Wizard.AiAssistant.XSuperObject in '..\Src\AiAssistant\C4D.Wizard.AiAssistant.XSuperObject.pas',
+  C4D.Wizard.AiAssistant.XSuperJSON in '..\Src\AiAssistant\C4D.Wizard.AiAssistant.XSuperJSON.pas',
+  C4D.Wizard.AiAssistant.Ask.Dockable in '..\Src\AiAssistant\C4D.Wizard.AiAssistant.Ask.Dockable.pas',
+  C4D.Wizard.AiAssistant.MenuHook in '..\Src\AiAssistant\C4D.Wizard.AiAssistant.MenuHook.pas',
+  C4D.Wizard.AiAssistant.CodeEditorHelper in '..\Src\AiAssistant\C4D.Wizard.AiAssistant.CodeEditorHelper.pas',
+  C4D.Wizard.AiAssistant.Progress in '..\Src\AiAssistant\C4D.Wizard.AiAssistant.Progress.pas' {Frm_Progress};
 
 end.

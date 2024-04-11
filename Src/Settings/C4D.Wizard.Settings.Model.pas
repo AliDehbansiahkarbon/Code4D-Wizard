@@ -27,6 +27,8 @@ type
     FShortcutReplaceFiles: string;
     FShortcutNotesUse: Boolean;
     FShortcutNotes: string;
+    FShortcutAIAssistantUse: Boolean;
+    FShortcutAIAssistant: string;
     FShortcutGitHubDesktopUse: Boolean;
     FShortcutGitHubDesktop: string;
     FBlockKeyInsert: Boolean;
@@ -55,6 +57,11 @@ type
     C_ShortcutNotesUse = 'ShortcutNotesUse';
     C_ShortcutNotes = 'ShortcutNotes';
     C_ShortcutNotesDefu = 'Ctrl + Shift + Alt + N';
+
+//    C_ShortcutAiAssistantUse = 'ShortcutAiAssistantUse';
+//    C_ShortcutAiAssistant = 'ShortcutAiAssistant';
+//    C_ShortcutAiAssistantDefu = '';
+
     C_ShortcutGitHubDesktopUse = 'ShortcutGitHubDesktopUse';
     C_ShortcutGitHubDesktop = 'ShortcutGitHubDesktop';
     C_ShortcutGitHubDesktopDefu = 'Ctrl + Shift + Alt + G';
@@ -99,6 +106,11 @@ type
     function ShortcutNotesUse(Value: Boolean): IC4DWizardSettingsModel; overload;
     function ShortcutNotes: string; overload;
     function ShortcutNotes(Value: string): IC4DWizardSettingsModel; overload;
+
+    function ShortcutAIAssistantUse: Boolean; overload;
+    function ShortcutAIAssistantUse(Value: Boolean): IC4DWizardSettingsModel; overload;
+    function ShortcutAIAssistant: string; overload;
+    function ShortcutAIAssistant(Value: string): IC4DWizardSettingsModel; overload;
 
     function ShortcutGitHubDesktopUse: Boolean; overload;
     function ShortcutGitHubDesktopUse(Value: Boolean): IC4DWizardSettingsModel; overload;
@@ -341,6 +353,28 @@ begin
   Result := TC4DWizardUtils.RemoveSpacesAll(FShortcutDefaultFilesInOpeningProject);
 end;
 
+function TC4DWizardSettingsModel.ShortcutAIAssistant: string;
+begin
+  Result := TC4DWizardUtils.RemoveSpacesAll(FShortcutAIAssistant);
+end;
+
+function TC4DWizardSettingsModel.ShortcutAIAssistant(Value: string): IC4DWizardSettingsModel;
+begin
+  Result := Self;
+  FShortcutAIAssistant := TC4DWizardUtils.RemoveSpacesAll(Value);
+end;
+
+function TC4DWizardSettingsModel.ShortcutAIAssistantUse(Value: Boolean): IC4DWizardSettingsModel;
+begin
+  Result := Self;
+  FShortcutAIAssistantUse := Value;
+end;
+
+function TC4DWizardSettingsModel.ShortcutAIAssistantUse: Boolean;
+begin
+  Result := FShortcutAIAssistantUse;
+end;
+
 function TC4DWizardSettingsModel.ShortcutDefaultFilesInOpeningProject(Value: string): IC4DWizardSettingsModel;
 begin
   Result := Self;
@@ -385,6 +419,10 @@ begin
   FIniFile.Writestring(C_SESSION, C_ShortcutReplaceFiles, FShortcutReplaceFiles);
   FIniFile.WriteBool(C_SESSION, C_ShortcutNotesUse, FShortcutNotesUse);
   FIniFile.Writestring(C_SESSION, C_ShortcutNotes, FShortcutNotes);
+
+//  FIniFile.WriteBool(C_SESSION, C_ShortcutAIAssistantUse, FShortcutAIAssistantUse);
+//  FIniFile.Writestring(C_SESSION, C_ShortcutAIAssistant, FShortcutAIAssistant);
+
   FIniFile.WriteBool(C_SESSION, C_ShortcutGitHubDesktopUse, FShortcutGitHubDesktopUse);
   FIniFile.Writestring(C_SESSION, C_ShortcutGitHubDesktop, FShortcutGitHubDesktop);
   FIniFile.WriteBool(C_SESSION, C_ShortcutDefaultFilesInOpeningProjectUse, FShortcutDefaultFilesInOpeningProjectUse);
@@ -409,6 +447,8 @@ begin
   FShortcutReplaceFiles := FIniFile.Readstring(C_SESSION, C_ShortcutReplaceFiles, C_ShortcutReplaceFilesDefu);
   FShortcutNotesUse := FIniFile.ReadBool(C_SESSION, C_ShortcutNotesUse, True);
   FShortcutNotes := FIniFile.Readstring(C_SESSION, C_ShortcutNotes, C_ShortcutNotesDefu);
+  //FShortcutAIAssistantUse := FIniFile.ReadBool(C_SESSION, C_ShortcutAIAssistantUse, True);
+  //FShortcutAIAssistant := FIniFile.Readstring(C_SESSION, C_ShortcutAIAssistant, C_ShortcutAIAssistantDefu);
   FShortcutGitHubDesktopUse := FIniFile.ReadBool(C_SESSION, C_ShortcutGitHubDesktopUse, False);
   FShortcutGitHubDesktop := FIniFile.Readstring(C_SESSION, C_ShortcutGitHubDesktop, C_ShortcutGitHubDesktopDefu);
   FShortcutDefaultFilesInOpeningProjectUse := FIniFile.ReadBool(C_SESSION, C_ShortcutDefaultFilesInOpeningProjectUse, False);

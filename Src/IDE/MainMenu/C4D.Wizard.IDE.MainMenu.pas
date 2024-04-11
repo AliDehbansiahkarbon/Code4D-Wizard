@@ -43,7 +43,8 @@ uses
   C4D.Wizard.Settings.Model,
   C4D.Wizard.IDE.MainMenu.OpenExternal,
   C4D.Wizard.IDE.ImageListMain,
-  C4D.Wizard.IDE.MainMenu.Backup;
+  C4D.Wizard.IDE.MainMenu.Backup,
+  C4D.Wizard.IDE.MainMenu.AiAssistant;
 
 var
   Instance: IC4DWizardIDEMainMenu;
@@ -119,6 +120,8 @@ begin
     TC4DWizardIDEMainMenuClicks.NotesClick,
     TC4DWizardIDEImageListMain.GetInstance.ImgIndexNotes,
     Self.GetShortcutNotes);
+
+  TC4DWizardIDEMainMenuAiAssitant.New(FMenuItemC4D).Process;
 
   Self.CreateSubMenu('C4DSeparator50', '-', nil);
   Self.CreateSubMenu(TC4DConsts.ITEM_MENU_DefaultFilesInOpeningProject_NAME,
