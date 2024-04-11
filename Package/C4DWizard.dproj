@@ -286,31 +286,31 @@
             <FormType>dfm</FormType>
         </DCCReference>
         <DCCReference Include="..\Src\IDE\MainMenu\C4D.Wizard.IDE.MainMenu.AiAssistant.pas"/>
-        <DCCReference Include="..\Src\AiAssistant\C4D.Wizard.AiAssistant.Interfaces.pas"/>
-        <DCCReference Include="..\Src\AiAssistant\C4D.Wizard.AiAssistant.Setting.View.pas">
+        <DCCReference Include="..\Src\AiAssistant\Utils\C4D.Wizard.AiAssistant.Interfaces.pas"/>
+        <DCCReference Include="..\Src\AiAssistant\UI\C4D.Wizard.AiAssistant.Setting.View.pas">
             <Form>Frm_AI_Setting</Form>
             <FormType>dfm</FormType>
         </DCCReference>
-        <DCCReference Include="..\Src\AiAssistant\C4D.Wizard.AiAssistant.Ask.Frame.pas">
+        <DCCReference Include="..\Src\AiAssistant\UI\C4D.Wizard.AiAssistant.Ask.Frame.pas">
             <Form>Fram_Question</Form>
             <FormType>dfm</FormType>
             <DesignClass>TFrame</DesignClass>
         </DCCReference>
-        <DCCReference Include="..\Src\AiAssistant\C4D.Wizard.AiAssistant.Thread.pas"/>
-        <DCCReference Include="..\Src\AiAssistant\C4D.Wizard.AiAssistant.Lexer.pas"/>
-        <DCCReference Include="..\Src\AiAssistant\C4D.Wizard.AiAssistant.History.pas"/>
-        <DCCReference Include="..\Src\AiAssistant\C4D.Wizard.AiAssistant.PascalLexer.pas"/>
-        <DCCReference Include="..\Src\AiAssistant\C4D.Wizard.AiAssistant.PascalLexerTypes.pas"/>
-        <DCCReference Include="..\Src\AiAssistant\C4D.Wizard.AiAssistant.XSuperObject.pas"/>
-        <DCCReference Include="..\Src\AiAssistant\C4D.Wizard.AiAssistant.XSuperJSON.pas"/>
-        <DCCReference Include="..\Src\AiAssistant\C4D.Wizard.AiAssistant.Ask.Dockable.pas"/>
-        <DCCReference Include="..\Src\AiAssistant\C4D.Wizard.AiAssistant.MenuHook.pas"/>
-        <DCCReference Include="..\Src\AiAssistant\C4D.Wizard.AiAssistant.Editor.Helper.pas"/>
-        <DCCReference Include="..\Src\AiAssistant\C4D.Wizard.AiAssistant.Progress.pas">
+        <DCCReference Include="..\Src\AiAssistant\Utils\C4D.Wizard.AiAssistant.Thread.pas"/>
+        <DCCReference Include="..\Src\AiAssistant\Utils\C4D.Wizard.AiAssistant.Lexer.pas"/>
+        <DCCReference Include="..\Src\AiAssistant\Utils\C4D.Wizard.AiAssistant.History.pas"/>
+        <DCCReference Include="..\Src\AiAssistant\Trd\C4D.Wizard.AiAssistant.PascalLexer.pas"/>
+        <DCCReference Include="..\Src\AiAssistant\Trd\C4D.Wizard.AiAssistant.PascalLexerTypes.pas"/>
+        <DCCReference Include="..\Src\AiAssistant\Trd\C4D.Wizard.AiAssistant.XSuperObject.pas"/>
+        <DCCReference Include="..\Src\AiAssistant\Trd\C4D.Wizard.AiAssistant.XSuperJSON.pas"/>
+        <DCCReference Include="..\Src\AiAssistant\UI\C4D.Wizard.AiAssistant.Ask.Dockable.pas"/>
+        <DCCReference Include="..\Src\AiAssistant\Trd\C4D.Wizard.AiAssistant.MenuHook.pas"/>
+        <DCCReference Include="..\Src\AiAssistant\Editor\C4D.Wizard.AiAssistant.Editor.Helper.pas"/>
+        <DCCReference Include="..\Src\AiAssistant\UI\C4D.Wizard.AiAssistant.Progress.pas">
             <Form>Frm_Progress</Form>
             <FormType>dfm</FormType>
         </DCCReference>
-        <DCCReference Include="..\Src\AiAssistant\C4D.Wizard.AiAssistant.Editor.PopUpMenu.pas"/>
+        <DCCReference Include="..\Src\AiAssistant\Editor\C4D.Wizard.AiAssistant.Editor.PopUpMenu.pas"/>
         <RcItem Include="Img\C4D_Logo.bmp">
             <ResourceType>BITMAP</ResourceType>
             <ResourceId>C4D_Logo</ResourceId>
